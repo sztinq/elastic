@@ -4,4 +4,5 @@ base:
 
 prod:
   '*':
-    - elasticsearch.install
+   # - elasticsearch.install
+    - kafka.install

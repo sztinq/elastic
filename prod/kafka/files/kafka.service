@@ -1,0 +1,12 @@
+[Unit]
+Description=kafka
+After=zookeeper.target
+
+[Service]
+Type=forking
+ExecStart=/usr/local/kafka/bin/kafka-server-start.sh -daemon /usr/local/kafka/config/server.properties
+ExecStop=/usr/local/kafka/bin/kafka-server-stop.sh
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
